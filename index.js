@@ -29,5 +29,61 @@ function displayTime() {
  
 }
 
-setInterval(displayTime, 1);
+setInterval(displayTime, 1000);
+
+
+/*smart watch config*/
+let currentDate = new Date();
+
+//using a arrow function instead of a regular one
+let smartWatchData = () => {
+    let now = new Date();
+    let smartHr = now.getHours();
+    let smartMin = now.getMinutes();
+    let smartSec = now.getSeconds();
+
+    document.getElementById('sHour').innerHTML = twoDigits(smartHr);
+    document.getElementById('sMins').innerHTML = twoDigits(smartMin);
+    document.getElementById('sSecs').innerHTML = twoDigits(smartSec);
+}
+
+setInterval(smartWatchData, 1000);
+
+function displayDate() {
+    let dayOfTheWeek = currentDate.getDay();
+    let day = currentDate.getDate();
+    let month = currentDate.getMonth()+1;
+    let year = currentDate.getFullYear();
+
+    switch(dayOfTheWeek) {
+        case 0:
+            dayOfTheWeek = 'DOM'
+            break;
+        case 1:
+            dayOfTheWeek = 'SEG'
+            break;
+        case 2:
+            dayOfTheWeek = 'TER'
+            break;
+        case 3:
+            dayOfTheWeek = 'QUA'
+            break;
+        case 4:
+            dayOfTheWeek = 'QUI'
+            break;
+        case 5:
+            dayOfTheWeek = 'SEX'
+            break;
+        case 6:
+            dayOfTheWeek = 'SAB'
+            break;
+    }
+
+    document.getElementById('dayOfTheWeek').textContent = dayOfTheWeek;
+    document.getElementById('day').innerHTML = twoDigits(day);
+    document.getElementById('month').innerHTML = twoDigits(month);
+    document.getElementById('year').innerHTML = twoDigits(year);
+
+}
+setInterval(displayDate, 1);
 

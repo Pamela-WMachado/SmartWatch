@@ -1,7 +1,8 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;1,400&display=swap');
 
 .digital-clock {
-    font-family: Orbitron;
+    font-family: 'Times New Roman', Times, serif;
     background-color: black;
     color: white;
     width: 8em;
@@ -23,3 +24,50 @@
       opacity: 0;
     }
   }
+
+  /*smart watch config*/
+.smartWatch {
+    font-family: 'Roboto Mono', monospace;
+    margin-top: 1em;
+    background-color: black;
+    width: 7em;
+    height: 7em;
+    font-size: 3em;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1 solid;
+    border-radius: 0.5em;
+    
+    
+}
+.inlineInfo {
+    
+}
+
+#sClock {
+    color: aqua;
+    padding-top: 2em;
+    font-weight: bold;
+    
+}
+
+
+#sSecs {
+    font-size: 0.5em;
+}
+
+#sDate {
+    font-size: 0.6em;
+
+}
+
+#fullDate {
+    color: rgb(247, 33, 233);
+}
+
+#dayOfTheWeek {
+    color: rgb(36, 120, 190);
+    font-weight: bold;
+}
+
